@@ -16,7 +16,10 @@ const columnService = {
       return response.data;
     } catch (error) {
       console.error('Error getting columns for user ', error)
-    }
+       
+      throw error;
+    
+     }
   },
 
   async getColumnsOnBoard() {
