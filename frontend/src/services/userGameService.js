@@ -17,7 +17,8 @@ const userGameService = {
       return response.data;
     } catch (error) {
       console.error('Error getting user play pile', error);
-    }
+       throw error;
+     }
   },
 
   async getUserGameByColumnIds(columnIds) {
@@ -32,6 +33,7 @@ const userGameService = {
       return response.data;
     } catch (error) {
       console.error('Error getting user game by column ids', error);
+      throw error;
     }
   },
 
@@ -47,7 +49,9 @@ const userGameService = {
       return response.data;
     } catch (error) {
       console.error('Error getting user games on board', error);
-    }
+       throw error;
+      
+     }
   },
 
   async updateUserGameData(igdbId, fields) {
@@ -57,6 +61,7 @@ const userGameService = {
       return response.data;
     } catch (error) {
       console.error(`Error updating user's game data`, error);
+      throw error;
     }
   },
 
@@ -67,7 +72,8 @@ const userGameService = {
       return response.data;
     } catch (error) {
       console.error(`Error updating game card positions in column ${error}`)
-    }
+     throw error;
+     }
   },
 };
 
