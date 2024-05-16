@@ -23,6 +23,7 @@ const gameService = {
 
     } catch (error) {
       console.error('Error searching IGDB for games:', error);
+      throw error;
     }
   },
 
@@ -32,6 +33,7 @@ const gameService = {
       return response.data;
     } catch (error) {
       console.error(error);
+      throw error;
     }
   },
 
@@ -50,6 +52,7 @@ const gameService = {
             return response.data;
     } catch (error) {
       console.error(error);
+      throw error;
     }
 
   },
