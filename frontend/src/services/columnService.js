@@ -30,6 +30,7 @@ const columnService = {
       return response.data;
     } catch (error) {
       console.error(`Error getting columns to be displayed on board`, error)
+      throw error;
     }
   },
 
@@ -50,6 +51,7 @@ const columnService = {
       return response.data;
     } catch (error) {
       console.error(`Error updated column ${column} `, error)
+      throw error;
     }
   },
 
@@ -61,6 +63,7 @@ const columnService = {
       return response.data;
     } catch (error) {
       console.error(`Error updating column positions `, error);
+      throw error;
     }
   },
 
@@ -70,6 +73,7 @@ const columnService = {
       return response.data;
     } catch (error) {
       console.error(`Error deleting column ${column} `, error)
+      throw error;
     }
   },
 
