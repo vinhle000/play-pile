@@ -1,4 +1,4 @@
-import {useState, useEffect, createContext} from 'react'
+import React, {useState, useEffect, createContext} from 'react'
 import userGameService from '@/services/userGameService'
 
 const UserPlayPileGamesContext = createContext({});

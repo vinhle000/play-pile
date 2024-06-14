@@ -3,8 +3,6 @@ import axios from 'axios';
 import userService from '@/services/userService';
 const UserContext = createContext({});
 
-const API_URL = `${import.meta.env.VITE_REACT_APP_URL}/api/users`;
-
 export const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);

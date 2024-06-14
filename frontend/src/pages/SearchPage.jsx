@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import { useLocation} from 'react-router-dom'
 import { TailSpin } from "react-loader-spinner"
 

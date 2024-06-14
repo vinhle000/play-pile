@@ -2,8 +2,12 @@ import axios from 'axios'
 import gameService from './gameService'
 // Set withCredentials to true for all requests
 axios.defaults.withCredentials = true;
-const envURL = import.meta.env.VITE_ENV === 'prod' ? import.meta.env.VITE_REACT_APP_URL : 'http://localhost:8000';
-const API_URL = `${envURL}/api/userGames`;
+
+//FIXME: vites's  "import.meta.env" is not directly usable in Jest, unless configured properly
+// have to mock it. Will only be able to test locally for now.
+const API_URL = `http://localhost:8000`;
+// const envURL = import.meta.env.VITE_ENV === 'prod' ? import.meta.env.VITE_REACT_APP_URL : 'http://localhost:8000';
+// const API_URL = `${envURL}/api/userGames`;
 
 const userGameService = {
 
